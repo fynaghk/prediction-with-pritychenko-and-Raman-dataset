@@ -94,3 +94,7 @@ for col in columns_needed[3:]:
 # **Boş xanaları yoxlayırıq**
 print("Boş xanaların sayı:")
 print(df_combined.isnull().sum())
+
+output_path = "/content/combined_dataset.xlsx"
+df_combined.to_excel(output_path, index=False)
+print(f"Birləşdirilmiş dataset saxlanıldı: {output_path}")
